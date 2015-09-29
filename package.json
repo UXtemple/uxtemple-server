@@ -1,0 +1,36 @@
+{
+  "name": "uxtemple-server",
+  "version": "1.0.0",
+  "description": "UXtemple's server",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UXtemple/uxtemple-server.git"
+  },
+  "keywords": [
+    "UXtemple",
+    "server",
+    "panels"
+  ],
+  "author": "UXtemple <hi@uxtemple.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UXtemple/uxtemple-server/issues"
+  },
+  "homepage": "https://github.com/UXtemple/uxtemple-server#readme",
+  "apps": [
+    "node_modules/polomundial.com.ar",
+    "node_modules/uxtemple.com",
+    "node_modules/usepanels.com"
+  ],
+  "dependencies": {
+    "panels": "^0.1.5",
+    "polomundial.com.ar": "^1.0.0",
+    "usepanels.com": "^1.0.0",
+    "uxtemple.com": "^1.0.1"
+  }
+}
