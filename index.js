@@ -1,13 +1,9 @@
+const panels = require('./package.json').panels;
 const createServer = require('panels/server');
 
-const APPS = process.env.APPS ? process.env.APPS.split(',') : require('./package.json').apps;
-const LISTEN = process.env.LISTEN || 3000;
+createServer({
+  apps: panels.apps,
+  heapId: panels.heapId
+}).listen(panels.listen);
 
-const server = createServer({
-  apps: APPS
-});
-
-server.listen(LISTEN);
-
-const at = typeof parseInt(LISTEN, 10) === 'number' ? `http://0.0.0.0/${LISTEN}` : LISTEN;
-console.log(`panels-server is ready at ${at}`);
+console.log(`panels is ready at http://0.0.0.0:${panels.listen}`);

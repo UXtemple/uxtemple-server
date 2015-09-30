@@ -22,15 +22,19 @@
     "url": "https://github.com/UXtemple/uxtemple-server/issues"
   },
   "homepage": "https://github.com/UXtemple/uxtemple-server#readme",
-  "apps": [
-    "node_modules/polomundial.com.ar",
-    "node_modules/uxtemple.com",
-    "node_modules/usepanels.com"
-  ],
   "dependencies": {
-    "panels": "^0.1.5",
+    "panels": "^0.2.0",
     "polomundial.com.ar": "^1.0.0",
     "usepanels.com": "^1.0.0",
     "uxtemple.com": "^1.0.1"
+  },
+  "panels": {
+    "apps": [
+      "node_modules/polomundial.com.ar",
+      "node_modules/uxtemple.com",
+      "node_modules/usepanels.com"
+    ],
+    "heapId": 117691624,
+    "listen": 80
   }
 }
