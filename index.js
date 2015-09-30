@@ -1,9 +1,7 @@
-const panels = require('./package.json').panels;
 const createServer = require('panels/server');
 
-createServer({
-  apps: panels.apps,
-  heapId: panels.heapId
-}).listen(panels.listen);
+const LISTEN = process.env.LISTEN || 3000;
 
-console.log(`panels is ready at http://0.0.0.0:${panels.listen}`);
+createServer(require('./package.json').panels).listen(LISTEN);
+
+console.log(`panels is ready at http://0.0.0.0:${LISTEN}`);
